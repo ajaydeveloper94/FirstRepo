@@ -36,11 +36,11 @@ public class PresentationLogic {
 		switch(ch)
 		{
 		case 1:
-			try {
+			try 
+			{
 				bl.SortingFile();
-			} catch (IOException e1) {
-				
-				//e1.printStackTrace();
+			} catch (IOException e1) 
+			{
 				System.out.println("Directory doesnot exists");
 			}
 			break;
@@ -68,29 +68,34 @@ public class PresentationLogic {
 			switch(ch2)
 			{
 			 case 4:
-				try {
+				try 
+				{
 					bl.CreateFile(bl.Filedetails());
-				} catch (IOException e) {
-					//e.printStackTrace();
+				} catch (IOException e) 
+				{
 					System.out.println("File already exists");
 				}
 				break;
 				
 			 case 5:
-				try {
+				try 
+				{
 					bl.SearchFile(bl.Filedetails());
-				} catch (IOException e) {
+				} catch (IOException e) 
+				{
 					
-					e.printStackTrace();
+					System.out.println("Directory doesnot exists");
 				}
 				break;
 				
 			 case 6:
-				try {
+				try 
+				{
 					bl.DeleteFile(bl.Filedetails());
-				} catch (IOException e) {
+				} catch (IOException e) 
+				{
 					
-					e.printStackTrace();
+					System.out.println("Directory doesnot exists");
 				}
 				break;
 				

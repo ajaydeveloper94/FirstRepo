@@ -53,18 +53,9 @@ public class BusinessLogic {
  			{
  				System.out.println("File is created successfully.");
  			}
- 			else
- 			{
- 				Paths.get(directorypath +File.separator + userfilename);
- 		 		Files.createFile(filepath);
- 			}
  			
  		}
- 		else
- 		{
- 			Paths.get("root");
- 	 		Files.createDirectories(directorypath);
- 		}
+ 	
 		
 		 
 	}
@@ -94,8 +85,8 @@ public class BusinessLogic {
 	
 	
 		
-		public void SearchFile(String userfilename) throws IOException
-		{
+    public void SearchFile(String userfilename) throws IOException
+	{
 			int count=0;
 			Pattern pattern = Pattern.compile(Pattern.quote(userfilename),Pattern.CASE_INSENSITIVE);
 					
@@ -121,7 +112,7 @@ public class BusinessLogic {
 			
 		}
 		
-		public void DeleteFile(String userfilename) throws IOException
+	public void DeleteFile(String userfilename) throws IOException
 		{
 			int count=0;
 				  
