@@ -1,0 +1,40 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- JDBC Connection setting -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/flyawaydb?createDatabaseIfNotExist=true</property>
+		<property name="connection.username">ajay</property>
+		<property name="connection.password">ajay</property>
+
+		<!-- Select SQL Dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Print the SQL to console -->
+		<property name="show_sql">true</property>
+
+		<!-- JDBC Connection pool settings to be used -->
+		<property name="connection.pool_size">10</property>
+
+		<property name="hibernate.id.new_generator_mappings">false</property>
+		<property name="hbm2ddl.auto">update</property>
+
+        <mapping class="flyaway.entities.UserTable"></mapping>
+        <mapping class="flyaway.entities.AirlineTable"></mapping>
+        <mapping class="flyaway.entities.CreateFlightTable"></mapping>
+        <mapping class="flyaway.entities.DestinationTable"></mapping>
+        <mapping class="flyaway.entities.FlightTable"></mapping>
+        <mapping class="flyaway.entities.SourceTable"></mapping>
+        <mapping class="flyaway.entities.BookingTable"></mapping>
+       
+        
+	</session-factory>
+
+</hibernate-configuration>
