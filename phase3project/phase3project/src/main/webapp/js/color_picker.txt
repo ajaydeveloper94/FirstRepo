@@ -1,0 +1,7 @@
+$(document).ready(function () {
+$("#kUI_color_picker").on('change',function(e) {
+            $("#inba").empty();
+            var color = $(".k-color-value").val();
+            $("#inba").append(color);
+        });
+});
